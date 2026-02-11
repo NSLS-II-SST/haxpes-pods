@@ -1,7 +1,7 @@
 [configuration]
-baseline = []
-has_slits = false
-has_motorized_samples = false
+baseline = ["blconf"]
+has_slits = true
+has_motorized_samples = true
 has_motorized_eref = false
 has_polarization = false
 
@@ -13,13 +13,20 @@ reference = ""
 [devices]
 
 [settings]
-modules = []
+modules = ["haxpes.startup"]
+beamline = "sst2"
+endstation = "haxpes"
+suspenders = ["haxpes-suspenders"]
+plan_decorators = ["haxpes-shutter"]
+
 
 [settings.plans]
+xps = ["xps_regions.toml"]
+xas = ["xas_regions.toml"]
 
 [settings.redis.md]
 host = "redis"
-prefix = ""
+prefix = "haxpes"
 
 [settings.redis.info]
 host = "redisInfo"
