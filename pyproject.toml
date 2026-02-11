@@ -1,0 +1,45 @@
+[project]
+name = "haxpes-pods"
+version = "0.1.0"
+description = "Beamline-specific configuration and services for haxpes beamline"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[project.scripts]
+"haxpes-pods" = "haxpes_pods.deploy:main"
+
+[tool.pixi.project]
+name = "haxpes-pods"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+description = "Beamline-specific configuration and services for haxpes beamline"
+
+[tool.pixi.dependencies]
+podman-compose = "*"
+python = ">=3.8"
+ipython = "*"
+pip = "*"
+
+[tool.pixi.pypi-dependencies]
+nbs-pods = { git = "https://github.com/xraygui/nbs-pods.git"}
+haxpes-pods = { path = ".", editable = true }
+
+[tool.pixi.activation.env]
+BEAMLINE_NAME = "haxpes"
+
+[tool.pixi.tasks]
+start = "haxpes-pods start"
+stop = "haxpes-pods stop"
+demo = "haxpes-pods demo"
+list = "haxpes-pods list"
+
