@@ -40,6 +40,7 @@ BEAMLINE_NAME = "haxpes"
 [tool.pixi.tasks]
 start = "haxpes-pods start"
 stop = "haxpes-pods stop"
+restart = "haxpes-pods restart"
 demo = "haxpes-pods demo"
 list = "haxpes-pods list"
 

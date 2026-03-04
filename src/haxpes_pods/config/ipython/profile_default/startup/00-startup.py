@@ -13,18 +13,4 @@ nslsii.configure_base(
 )
 
 
-def mv(*args, group=None, **kwargs):
-    yield from _mv(*args, group=group, **kwargs)
-
-
-def mvr(*args, group=None, **kwargs):
-    yield from _mvr(*args, group=group, **kwargs)
-
-
-move = mv
-
-disable_tender_beam()
-disable_soft_beam()
-enable_tender_beam()
-
 RE(set_exposure(1.0))

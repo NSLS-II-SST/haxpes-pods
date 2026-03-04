@@ -24,7 +24,7 @@ primary_manipulator = "manipulator"
 loader = "nbs_bl.qt.models.beamline.SSTBeamlineModel"
 
 [devices]
-psh1 = { visible = false, view_only = true }
+psh1 = { visible = true, _target = "nbs_gui.models.misc.GVModelConfirmation" }
 psh4 = { visible = false }
 enpostender = {"_role" = "energy", "load_order" = 1}
 beamselection = {_target = "nbs_gui.models.mode.ModeModel"}

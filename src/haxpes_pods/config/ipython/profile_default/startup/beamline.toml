@@ -1,6 +1,6 @@
 [configuration]
 baseline = ["blconf"]
-has_slits = true
+has_slits = false
 has_motorized_samples = true
 has_motorized_eref = false
 has_polarization = false
@@ -13,7 +13,7 @@ reference = ""
 [devices]
 
 [settings]
-modules = ["haxpes.startup"]
+startup_modules = ["nbs_bl.startup", "haxpes.startup"]
 beamline = "sst2"
 endstation = "haxpes"
 suspenders = ["haxpes-suspenders"]

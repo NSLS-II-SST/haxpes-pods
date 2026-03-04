@@ -12,7 +12,7 @@
 "MultiMeshBuilder" = "nbs_sim.devices.manipulator.MultiMesh"
 "ManipulatorBuilder" = "nbs_sim.devices.manipulator.Manipulator"
 "EnPosFactory" = "nbs_sim.devices.energy.SST1Energy"
-"energypos" = "nbs_sim.devices.energy.HAXEnergy"
+"energypos" = "nbs_sim.devices.energy.HAXEnergyFlyer"
 "QuadSlits" = "nbs_sim.devices.slits.QuadSlits"
 "QuadSlitsLimitFactory" = "nbs_sim.devices.slits.QuadSlitsLimitFactory"
 "SRSADCFactory" = "nbs_sim.devices.srs570.SRSADCFactory"
@@ -26,7 +26,7 @@
 haxslt = {trans_min = 0, trans_max = 40, _group="apertures", _role="slits", user_limits=[0, 40]}
 slt_dm1 = {trans_min = 0, trans_max = 40, _group="apertures", _role="slits", user_limits=[0, 40]}
 ring_current = {_target = "nbs_sim.devices.signals.RingCurrent"}
-enpostender = {_role="energy", _load_order=1 }
+enpostender = {_role="energy", _load_order=1, prefix="" }
 beamselection = {_target = "nbs_sim.devices.signals.ModeControl"}
 beamon = {_target = "nbs_sim.devices.signals.ConstantSignal", value = 1}
 softbeamenable = {_target = "nbs_sim.devices.signals.EndstationControl", value = "HAXPES"}

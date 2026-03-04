@@ -61,10 +61,9 @@ name = "haxpes_manipulator"
 
 [enpostender]
 _target = "haxpes.devices.energy_tender.energypos"
-_defer_loading = true
 _group = ["source", "motors"]
 _modes = ["Tender"]
-prefix = ""
+prefix = "SR:C07-ID:G1A{SST2:1}"
 name = "SST2 Energy"
 
 [en]
